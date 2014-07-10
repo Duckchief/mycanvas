@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" hash="568468606">
+    <data-source source="LOCAL" name="Rails mycanvas: development" uuid="32287e3c-f67b-4f12-b0c2-02c0412bc3e3">
+      <driver-ref>postgresql</driver-ref>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql:mycanvas_development</jdbc-url>
+      <libraries />
+    </data-source>
+    <data-source source="LOCAL" name="Rails mycanvas: test" uuid="29459455-dfc0-4182-ac1a-53cbfc0dabb8">
+      <driver-ref>postgresql</driver-ref>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql:mycanvas_test</jdbc-url>
+      <libraries />
+    </data-source>
+    <data-source source="LOCAL" name="Rails mycanvas: production" uuid="c239ee2f-9b55-45c3-8804-e9b449df73bc">
+      <driver-ref>postgresql</driver-ref>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql:mycanvas_production</jdbc-url>
+      <user-name>mycanvas</user-name>
+      <user-password>df96df8fdf97df8adfefdfe4dffcdff1df8ddfe7dff3dfe9dfebdfe4dffcdfebdff9dff5dfeedfebdffedfebdfe8dfebdff9dfefdff5dffadfebdff9dff9dffddfe5dff8dfeedf8ddff7df8adf8fdf94</user-password>
+      <libraries />
+    </data-source>
+  </component>
+</project>
+

@@ -18,9 +18,13 @@
       </ul>
 
       <ul class="nav navbar-nav navbar-right">
-        <li><%= link_to "Sign Up", signup_path, class: "button" %></li>
-        <li><a href="#">Login</a></li>
-
+        <% if current_user %>
+            <li><%= link_to current_user.name, current_user %></li>
+            <li><%= link_to "Sign Out", session_path, method: :delete, class: "button" %></li>
+        <% else %>
+            <li><%= link_to "Sign Up", signup_path, class: "button" %></li>
+            <li><%= link_to "Sign In", new_session_path, class: "button" %></li>
+        <% end %>
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
