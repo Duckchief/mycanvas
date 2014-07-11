@@ -11,10 +11,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140710043636) do
+ActiveRecord::Schema.define(version: 20140711072343) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "cart_items", force: true do |t|
+    t.integer "owner_id"
+    t.string  "owner_type"
+    t.integer "quantity"
+    t.integer "item_id"
+    t.string  "item_type"
+    t.float   "price"
+  end
 
   create_table "products", force: true do |t|
     t.string   "name"
@@ -35,6 +44,14 @@ ActiveRecord::Schema.define(version: 20140710043636) do
   end
 
   create_table "shopping_carts", force: true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "standard_pricelists", force: true do |t|
+    t.decimal  "width",      null: false
+    t.decimal  "height",     null: false
+    t.decimal  "price",      null: false
     t.datetime "created_at"
     t.datetime "updated_at"
   end

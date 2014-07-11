@@ -1,0 +1,26 @@
+
+      <table>
+        <thead>
+        <td>Width</td>
+        <td>Height</td>
+        <td>Price</td>
+        <td>Action</td>
+        </thead>
+
+        <% @pricelist.each do |pricelist| %>
+          <tr>
+            <td>
+              <%= pricelist.width.to_i %>
+            </td>
+            <td>
+              <%= pricelist.height.to_i %>
+            </td>
+            <td>
+              <%= pricelist.price %>
+            </td>
+            <td>
+              <%= link_to "show",  show_pricelist_path(pricelist) %>
+            </td>
+          </tr>
+        <% end %>
+    </table>

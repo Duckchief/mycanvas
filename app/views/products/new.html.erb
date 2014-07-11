@@ -1,17 +1,34 @@
 <div class="container page-content">
-  <div id="hero-container-super" class="transparent">
-    <div class="container">
-      <div class="row">
-        <div id="hero-text-block" class="onwhite">
-          <h1>Let's get started</h1>
-          <p class = "hero-text-byline">
-            Check out our 'no surprises' pricing grid below.
-          </p>
+  <!--<div id="hero-container-super" class="transparent">-->
+    <!--<div class="container">-->
+      <!--<div class="row">-->
+        <!--<div id="hero-text-block" class="onwhite">-->
+          <!--<h1>Let's get started</h1>-->
+          <!--<p class = "hero-text-byline">-->
+            <!--A few clicks and you're ready to go.-->
+          <!--</p>-->
+        <!--</div>-->
+      <!--</div>-->
+    <!--</div>-->
+  <!--</div>-->
+
+  <%= form_for(@product) do |f| %>
+      <fieldset>
+        <div id="ProductPageChooseLayout">
+          <h3>1. Choose your layout</h3>
+          <!--# Let's say that @post.category returns "rails":-->
+          <%= radio_button("post", "category", "rails") %> Rails <br />
+          <%= radio_button("post", "category", "java") %> Java
         </div>
-      </div>
-    </div>
-  </div>
+      </fieldset>
+
+      <fieldset>
+        <div id="ProductPageChooseSize">
+          <h3> 2. Canvas Size</h3>
+
+        </div>
+      </fieldset>
+  <% end %>
 
 
-
-</div><!--end container-->
+</div>
