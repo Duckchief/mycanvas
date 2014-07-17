@@ -43,6 +43,10 @@ class UsersController < ApplicationController
     redirect_to root_path, alert: "Account successfully deleted"
   end
 
+
+
+
+
 private
 
   def user_params

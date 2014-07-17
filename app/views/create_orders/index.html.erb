@@ -1,0 +1,19 @@
+<div class="container page-content">
+  <%= form_for(@product) do |f| %>
+      <fieldset>
+        <div id="ProductPageChooseLayout">
+          <h3>1. Choose your layout</h3>
+          <!--# Let's say that @post.category returns "rails":-->
+          <%= radio_button("post", "category", "Single Panel") %> Single Panel <br />
+          <%= radio_button("post", "category", "Diptych") %> Diptych <br />
+          <%= radio_button("post", "category", "Triptych") %> Triptych
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <div id="ProductPageChooseSize">
+          <h3> 2. Canvas Size</h3>
+        </div>
+      </fieldset>
+  <% end %>
+</div>
