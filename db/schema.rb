@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140718081431) do
+ActiveRecord::Schema.define(version: 20140722075244) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -38,6 +38,7 @@ ActiveRecord::Schema.define(version: 20140718081431) do
     t.integer  "frame_option"
     t.integer  "edge_option"
     t.boolean  "copyright_owner",       default: false
+    t.string   "image"
   end
 
   create_table "shopping_carts", force: true do |t|
@@ -60,6 +61,7 @@ ActiveRecord::Schema.define(version: 20140718081431) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.boolean  "admin",           default: false
+    t.string   "avatar"
   end
 
 end

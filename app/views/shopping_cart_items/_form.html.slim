@@ -1,0 +1,22 @@
+.container.page-content
+  = simple_form_for(@item, html: {  multipart: true  }) do |f|
+    fieldset
+      #ProductPageChooseLayout
+      = f.input :layout, collection: [['Single',0], ['Diptych',1], ['Triptych',2]], as: :radio_buttons, label: "Choose your Layout", checked: 0
+    fieldset
+      ProductPageChooseSize
+      = f.association :standard_pricelist, label: "Choose your canvas size"
+    fieldset
+      #ProductPageChooseFrame
+      = f.input :frame_option, collection: [['Rolled',0], ['0.75in deep',1]], as: :radio_buttons, label: "Frame Options"
+    fieldset
+      #ProductPageEdge
+      = f.input :edge_option, collection: [['Black Border',0], ['White Border',1], ['Mirror',2]], as: :radio_buttons, label: "Edge Options"
+    fieldset
+      #legal
+    /= f.input :copyright_owner, as: :check_boxes, label: "I declare that I own the copyrigh to this image"
+    /= f.input :copyright_owner, [[true, 'Yes'] ,[false, 'No']], :first, :last
+    fieldset
+      #imageupload
+      = f.file_field :image
+    = f.button :submit, "Continue", class: "bun btn-primary"
