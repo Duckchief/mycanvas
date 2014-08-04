@@ -1,3 +1,43 @@
 // Place all the styles related to the shopping_cart_items controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+@import 'variables';
+
+.productpage {
+  .radio_buttons .controls {
+    padding-left: 20px;
+    color: #999999;
+  }
+
+  fieldset {
+    @include border-radius(3px);
+    margin-bottom: 10px;
+  }
+
+  .radio {
+    float: left;
+    width: 150px;
+  }
+
+  .title {
+    text-transform: uppercase;
+    font-size: 14px;
+    color: #000000;
+    background-color: lightgray;
+    padding: 5px 10px;
+  }
+
+  .radio + .radio {
+    margin-top: 7px;
+  }
+
+  .control-label {
+    display: none;
+  }
+
+  #ProductPageChooseLayout, #ProductPageChooseFrame {
+    display: none;
+  }
+}
+
