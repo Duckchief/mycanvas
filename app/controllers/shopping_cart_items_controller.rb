@@ -8,14 +8,22 @@ class ShoppingCartItemsController < ApplicationController
 
   def create
     # binding.pry
-
     cart_item = @cart.shopping_cart_items.build(item_params)
-    cart_item.quantity = 10
-    cart_item.price = 10
+    quantity = item_params[:quantity].to_i
 
-    cart_item.save
+    unless item_params[:standard_pricelist].nil?
+      cart_item.price = quantity*cart_item.standard_pricelist.price.to_i
+    end
 
-    redirect_to root_path
+    if cart_item.save
+      # check if the user has a home delivery address already set
+      # if not then redirect user to enter his home delivery address in his user profile
+      redirect_to root_path
+    else
+      @item = cart_item
+      @sp = StandardPricelist.all
+      render :new
+    end
   end
 
   def show
@@ -28,7 +36,7 @@ private
 
   def item_params
     params.require(:shopping_cart_item).
-        permit(:standard_pricelist_id, :edge_option, :layout, :standard_pricelist, :frame_option, :copyright_owner, :image)
+        permit(:standard_pricelist_id, :price, :quantity, :edge_option, :layout, :standard_pricelist, :frame_option, :copyright_owner, :image)
   end
 
   def set_cart

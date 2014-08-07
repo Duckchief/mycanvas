@@ -6,22 +6,32 @@
           h4 Choose your layout
         fieldset
           = f.input :layout, collection: [['Single',0]], as: :radio_buttons, checked: 0
+      #ProductPageQuantity
+        .title
+          h4 Choose your quantity
+        fieldset
+          = f.input :quantity, collection: [[1,1],[2,2],[3,3],[4,4],[5,5]], as: :select, default: 1
       #ProductPageChooseSize
         .title
           h4 Choose your canvas size
         fieldset
-            = f.association :standard_pricelist
+          = f.association :standard_pricelist
       #ProductPageChooseFrame
         .title
           h4 Choose your frame type
         fieldset
-            = f.input :frame_option, collection: [['0.75in deep',0]], as: :radio_buttons, checked: 0
+          = f.input :frame_option, collection: [['0.75in deep',0]], as: :radio_buttons, checked: 0
       #ProductPageEdge
         .title
           h4 Choose frame options
         fieldset
-            = f.input :edge_option, collection: [['Black Border',0], ['White Border',1], ['Mirror',2]], as: :radio_buttons
+          = f.input :edge_option, collection: [['Black Border',0], ['White Border',1], ['Mirror',2]], as: :radio_buttons, checked: 2
+      #ProductPageFulfilment
+        .title
+          h4 Shipping
+        fieldset
+          = f.input :shipping, collection: [['Yes please deliver to my address ( +$15)',0],['I will collect from your location', 1]], as: :radio_buttons, checked: 1
       #imageupload
         fieldset
             = f.file_field :image
-      = f.button :submit, "Continue", class: "bun btn-primary"
+      = f.button :submit, "Proceed to Checkout", class: "bun btn-primary"

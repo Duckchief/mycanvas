@@ -1,0 +1,12 @@
+.container.page-content
+  article#user
+    .user-header
+      h1 = "Hello #{@user.name}, this is your user page, obviously"
+      h4 = @user.email
+    .user-nav
+        - if current_user_admin?
+          = link_to "Edit Account", edit_user_path(@user), class: "button"
+          = link_to 'Delete Account', @user,    \
+            method: :delete,                    \
+            data: {  confirm: 'Are you sure?'}, \
+            class: 'button'

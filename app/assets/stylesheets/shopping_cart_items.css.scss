@@ -15,9 +15,18 @@
     margin-bottom: 10px;
   }
 
-  .radio {
-    float: left;
-    width: 150px;
+  #ProductPageFulfilment {
+    .radio {
+      float: none;
+      width: 500px;
+    }
+  }
+
+  #ProductPageEdge {
+    .radio {
+      float: left;
+      width: 150px;
+    }
   }
 
   .title {
@@ -29,14 +38,14 @@
   }
 
   .radio + .radio {
-    margin-top: 7px;
+    margin-top: 10px;
   }
 
   .control-label {
     display: none;
   }
 
-  #ProductPageChooseLayout, #ProductPageChooseFrame {
+  #ProductPageChooseLayout, #ProductPageChooseFrame, #ProductPageQuantity {
     display: none;
   }
 }

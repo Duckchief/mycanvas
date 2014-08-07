@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140722075244) do
+ActiveRecord::Schema.define(version: 20140807051113) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -29,7 +29,6 @@ ActiveRecord::Schema.define(version: 20140722075244) do
     t.integer  "quantity"
     t.integer  "item_id"
     t.string   "item_type"
-    t.float    "price"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "standard_pricelist_id"
@@ -39,6 +38,8 @@ ActiveRecord::Schema.define(version: 20140722075244) do
     t.integer  "edge_option"
     t.boolean  "copyright_owner",       default: false
     t.string   "image"
+    t.integer  "price_cents",           default: 0,     null: false
+    t.string   "price_currency",        default: "SGD", null: false
   end
 
   create_table "shopping_carts", force: true do |t|

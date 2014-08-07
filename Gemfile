@@ -38,6 +38,7 @@ gem 'acts_as_shopping_cart', '~> 0.2.1'
 gem 'slim'
 gem 'simple_form'
 gem 'carrierwave'
+gem 'money-rails'
 
 group :development do
   gem 'spring'

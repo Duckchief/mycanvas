@@ -1,0 +1,20 @@
+= form_for(@user) do |f|
+  fieldset
+    ol
+      li.required
+        = f.label :name
+        = f.text_field :name, size: 40, autofocus: true
+      li.required
+        = f.label :email
+        = f.email_field :email, size: 40
+      li.required
+        = f.label :password
+        = f.password_field :password, size: 40
+      li.required
+        = f.label :password_confirmation, "Confirm Password"
+        = f.password_field :password_confirmation, size: 40
+    p
+      - if @user.new_record?
+        = f.submit "Create Account"
+      - else
+        = f.submit "Update Account"

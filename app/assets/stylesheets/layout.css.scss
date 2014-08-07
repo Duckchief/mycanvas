@@ -1,0 +1,197 @@
+@import "bootstrap";
+
+html,
+body {
+  margin:0;
+  padding:0;
+  height:100%;
+  font-family: futura-pt, arial, sans-serif;
+  text-shadow: none;
+  font-size: 14px;
+}
+//---------------------
+// footer css goes here
+//---------------------
+#footer {
+  position:relative;
+  bottom:0px;
+  width: 100%;
+}
+
+#footer-container-overlay {
+  background:none repeat scroll 0% 0% rgba(0,0,0,0.7);
+  height: 400px;
+}
+
+#footer-container {
+  a {
+    color: #FFF;
+    text-decoration: none;
+  }
+  ul {
+    list-style-type: none;
+    font-size: 9pt;
+    padding: 0;
+  }
+  h5 {
+    @extend .nav-basics;
+    color: deeppink;
+    margin-bottom: 1em;
+  }
+  .footer-navigation {
+    list-style-type: none;
+    font-size: 9pt;
+    padding-top: 50px;
+  }
+}
+//---------------------
+// nav bar css goes here
+//---------------------
+.nav-main {
+  @extend .nav-basics;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+.navbar-inverse {
+  .navbar-nav {
+    .active, li {
+      .highlight {
+
+      }
+      a:hover, .highlight  {
+        background-color: deeppink;
+      }
+      a {
+        color: #ffffff;
+        background-color: transparent;
+      }
+    }
+  }
+}
+
+
+// -----------------------
+
+
+li {
+  line-height: 20px;
+}
+
+.uppercase {
+  text-transform: uppercase
+}
+
+#container {
+  width: 940px;
+  margin: 0px auto;
+}
+
+.page-content {
+  padding: 50px 0 50px 0;
+}
+
+.nav-basics, h1,.uppercase {
+  font-weight: 700;
+}
+
+.black_bar {
+  border-bottom: 50px solid #000000;
+  margin-bottom: 50px;
+}
+
+#price-table.table {
+  tbody {
+    tr {
+      td {
+        text-align: center;
+        vertical-align: middle;
+        min-width: 83px;
+        width: 83px;
+      }
+
+      td.size-column {
+        border-top: none;
+        border-right: 1px solid #666666;
+        font-size: 14px;
+      }
+
+      td.price-column {
+        border-top: none;
+        a {
+          font-size: 130%;
+          text-decoration: none;
+        }
+        a:hover {
+          color: deeppink;
+        }
+        a, a:link, a:active {
+          color: #000000;
+        }
+      }
+    }
+  }
+}
+
+
+.table-striped td {
+  padding: 15px;
+}
+
+.alert {
+  margin-top:70px;
+  padding-top: 40px;
+}
+
+fieldset {
+  border: 1px solid #BBBBBB;
+  padding: 15px;
+  margin-bottom: 5px;
+}
+
+//---------------------
+// Slider css goes here
+//---------------------
+.hero {
+  height: 450px;
+  overflow: hidden;
+}
+
+#hero-text-block {
+  height: 350px;
+  width: 400px;
+  padding: 20px;
+}
+
+#hero-text-block.onwhite p.hero-text-byline {
+  color: #666666;
+  text-shadow: none;
+  font-size: 150%;
+}
+
+#hero-container-super.transparent h1 {
+  color: deeppink;
+  font-size: 300%;
+  line-height: 0.9;
+  letter-spacing: -2px;
+}
+
+.carousel, .carousel-inner .item,  .carousel-inner .item img {
+  height: 100%;
+  width: 100%;
+}
+
+.carousel-control:hover {
+  color: deeppink;
+}
+
+// -----
+// user page
+// -----
+.user-nav {
+  margin: 30px 0 0 0;
+
+  a.button {
+    margin-right: 10px;
+  }
+}
