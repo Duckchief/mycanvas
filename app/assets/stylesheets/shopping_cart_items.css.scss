@@ -5,7 +5,7 @@
 @import 'variables';
 
 .productpage {
-  .radio_buttons .controls {
+  .radio_buttons .controls, .control-group .controls {
     padding-left: 20px;
     color: #999999;
   }
@@ -45,8 +45,25 @@
     display: none;
   }
 
-  #ProductPageChooseLayout, #ProductPageChooseFrame, #ProductPageQuantity {
+  .shopping_cart_item_copyright_owner .control-label{
+    display: inline;
+    position: relative;
+    top: 10px;
+    left: 20px;
+  }
+
+  #ProductPageChooseLayout, #ProductPageChooseFrame {
     display: none;
+  }
+
+  .copyright {
+    position: relative;
+    left: 20px;
+  }
+  #imageupload .checkbox {
+    position: relative;
+    top: -22px;
+    min-height: 0;
   }
 }
 

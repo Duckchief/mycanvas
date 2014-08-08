@@ -26,12 +26,13 @@
           h4 Choose frame options
         fieldset
           = f.input :edge_option, collection: [['Black Border',0], ['White Border',1], ['Mirror',2]], as: :radio_buttons, checked: 2
-      #ProductPageFulfilment
-        .title
-          h4 Shipping
-        fieldset
-          = f.input :shipping, collection: [['Yes please deliver to my address ( +$15)',0],['I will collect from your location', 1]], as: :radio_buttons, checked: 1
+      /#ProductPageFulfilment
+      /  .title
+      /    h4 Shipping
+      /  fieldset
+      /    = f.input :shipping, collection: [['Yes please deliver to my address ( +$15)',0],['I will collect from your location', 1]], as: :radio_buttons, checked: 1
       #imageupload
         fieldset
-            = f.file_field :image
+          = f.input :copyright_owner, label: "Are you copyright owner?"
+          = f.file_field :image
       = f.button :submit, "Proceed to Checkout", class: "bun btn-primary"

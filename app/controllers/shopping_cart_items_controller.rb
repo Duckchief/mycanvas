@@ -13,6 +13,7 @@ class ShoppingCartItemsController < ApplicationController
 
     unless item_params[:standard_pricelist].nil?
       cart_item.price = quantity*cart_item.standard_pricelist.price.to_i
+      # pick up the shipping charge
     end
 
     if cart_item.save

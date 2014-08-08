@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140807051113) do
+ActiveRecord::Schema.define(version: 20140808043202) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -21,6 +21,14 @@ ActiveRecord::Schema.define(version: 20140807051113) do
     t.decimal  "price"
     t.datetime "created_at"
     t.datetime "updated_at"
+  end
+
+  create_table "shippings", force: true do |t|
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "price_cents",    default: 0,     null: false
+    t.string   "price_currency", default: "SGD", null: false
   end
 
   create_table "shopping_cart_items", force: true do |t|
@@ -45,7 +53,10 @@ ActiveRecord::Schema.define(version: 20140807051113) do
   create_table "shopping_carts", force: true do |t|
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "shipping_id"
   end
+
+  add_index "shopping_carts", ["shipping_id"], name: "index_shopping_carts_on_shipping_id", using: :btree
 
   create_table "standard_pricelists", force: true do |t|
     t.decimal  "width",      null: false
